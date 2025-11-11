@@ -3,15 +3,13 @@
 #include <string>
 using namespace std;
 
-
 class Product {
     int id;
     string name;
     double price;
     int stock;
 public:
-    Product() : id(0), name("None"), price(0.0), stock(0) {} 
-
+    Product() : id(0), name("None"), price(0.0), stock(0) {}
     Product(int pid, string pname, double pprice, int pstock) {
         id = pid;
         name = pname;
@@ -64,7 +62,6 @@ public:
     }
 };
 
-
 class Admin {
 public:
     void addProduct(Product products[], int &size) {
@@ -72,11 +69,9 @@ public:
             cout << "Product list full!\n";
             return;
         }
-
         int id, stock;
         string name;
         double price;
-
         cout << "Enter Product ID: ";
         cin >> id;
         cout << "Enter Name: ";
@@ -85,12 +80,10 @@ public:
         cin >> price;
         cout << "Enter Stock: ";
         cin >> stock;
-
         products[size++] = Product(id, name, price, stock);
         cout << "Product added successfully!\n";
     }
 };
-
 
 void saveProducts(Product products[], int size) {
     ofstream fout("products.txt");
@@ -176,6 +169,5 @@ int main() {
             cout << "Invalid choice!\n";
         }
     }
-    return 0;
+    return 0;
 }
-
