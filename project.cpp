@@ -116,7 +116,7 @@ int main() {
 
     int choice;
     while (true) {
-        cout << "\n=== ONLINE SHOPPING SYSTEM ===\n";
+        cout << "\n ONLINE SHOPPING SYSTEM \n";
         cout << "1. Admin Add Product\n";
         cout << "2. View Products\n";
         cout << "3. Add to Cart\n";
@@ -192,3 +192,4 @@ int main() {
     for (int i = 0; i < productCount; i++) delete products[i];
     return 0;
 }
+
